@@ -1,0 +1,31 @@
+﻿@model WhatWeDo
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+
+<div class="container-fluid mx-5 my-3">
+    <h3>Slider image</h3>
+    <form asp-action="Create" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <input class="form-control" asp-for="Photo">
+            <span class="text-danger" asp-validation-for="Photo"></span>
+
+            <label for="header">Name</label>
+            <input class="form-control" asp-for="Name">
+            <span class="text-danger" asp-validation-for="Name"></span>
+
+            <label for="title">Desc</label>
+            <input class="form-control" asp-for="Desc">
+            <span class="text-danger" asp-validation-for="Desc"></span>
+
+            
+        </div>
+        <a class="btn btn-primary" asp-controller="WhatWeDo" asp-action="Index">Back</a>
+        <a class="btn btn-primary" asp-controller="WhatWeDo" asp-action="Create">Reset</a>
+        <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+</div>
+
+
