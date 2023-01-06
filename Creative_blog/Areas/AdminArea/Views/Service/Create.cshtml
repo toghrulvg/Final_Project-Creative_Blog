@@ -1,0 +1,33 @@
+﻿@model Service
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+
+<div class="container-fluid mx-5 my-3">
+    <h3>Service</h3>
+    <form asp-action="Create" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+
+            <label for="Icon">Icon</label>
+            <input class="form-control" asp-for="Icon">
+            <span class="text-danger" asp-validation-for="Icon"></span>
+
+            <label for="Name">Name</label>
+            <input class="form-control" asp-for="Name">
+            <span class="text-danger" asp-validation-for="Name"></span>
+
+            <label for="Desc">Desc</label>
+            <input class="form-control" asp-for="Desc">
+            <span class="text-danger" asp-validation-for="Desc"></span>
+
+
+        </div>
+        <a class="btn btn-primary" asp-controller="Service" asp-action="Index">Back</a>
+        <a class="btn btn-primary" asp-controller="Service" asp-action="Create">Reset</a>
+        <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+</div>
+
+

@@ -1,0 +1,53 @@
+﻿@model Service
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="container">
+    <div class="container-fluid my-3 mx-3">
+        <div class="table-responsive pt-3">
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>
+                            Icon
+                        </th>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Desc
+                        </th>
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                        <div class="box-item">
+                            <i class="@Model.Icon"></i>
+
+                        </div>
+                        </td>
+                        <td>
+                            @Model.Name
+                        </td>
+
+
+
+                        <td>
+                            @Model.Desc
+                        </td>
+
+
+                    </tr>
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

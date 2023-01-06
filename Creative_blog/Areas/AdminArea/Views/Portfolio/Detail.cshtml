@@ -1,0 +1,35 @@
+﻿@model Portfolio
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="container">
+    <div class="container-fluid my-3 mx-3">
+        <div class="table-responsive pt-3">
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>
+                            Image
+                        </th>
+                        
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="~/assets/imgs/@Model.Image" class="w-50 img-thumbnail mb-3">
+                        </td>
+
+                    </tr>
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

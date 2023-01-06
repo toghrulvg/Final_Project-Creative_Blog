@@ -1,0 +1,21 @@
+﻿@model Portfolio
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="container-fluid mx-5 my-3">
+    <h3>WhatWeDo Edit</h3>
+    <form asp-action="Edit" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <input class="form-control" asp-for="Photo">
+            <span class="text-danger" asp-validation-for="Photo"></span>
+
+        </div>
+        <a class="btn btn-primary" asp-controller="WhatWeDo" asp-action="Index">Back</a>
+        <a class="btn btn-primary" asp-controller="WhatWeDo" asp-action="Create">Reset</a>
+        <button type="submit" class="btn btn-primary">Edit</button>
+    </form>
+</div>
+
+
+
