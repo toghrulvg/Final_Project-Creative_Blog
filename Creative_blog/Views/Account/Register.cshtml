@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@model RegisterVM
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<title>Register - Creative Blog</title>
@@ -30,13 +32,26 @@
 					<img src="~/assets/Login_v1/images/img-01.png" alt="IMG">
 				</div>
 
-				<form class="login100-form validate-form">
+				<div class="text-danger" asp-validation-summary="All"></div>
+
+				<form asp-controller="Account" asp-action="Register" method="post" enctype="multipart/form-data" class="login100-form validate-form">
 					<span class="login100-form-title">
 						Get Registered
 					</span>
 
+					<div class="wrap-input100 validate-input" data-validate="Username is required">
+						<input asp-for="Username" class="input100" type="text" name="Username" placeholder="Username">
+						<span class="text-danger" asp-validation-for="Username"></span>
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+
+
 					<div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-						<input class="input100" type="text" name="email" placeholder="Email">
+						<input asp-for="Email" class="input100" type="text" name="email" placeholder="Email">
+						<span class="text-danger" asp-validation-for="Email"></span>
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
@@ -44,16 +59,16 @@
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Password is required">
-						<input class="input100" type="password" name="pass" placeholder="Password">
-						<span class="focus-input100"></span>
+						<input asp-for="Password" class="input100" type="password" name="Password" placeholder="Password">
+						<span asp-validation-for="Password" class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>
 						</span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Confirm Password is required">
-						<input class="input100" type="password" name="pass" placeholder="Confirm Password">
-						<span class="focus-input100"></span>
+						<input asp-for="ConfirmPassword" class="input100" type="password" name="ConfirmPassword" placeholder="Confirm Password">
+						<span asp-validation-for="ConfirmPassword" class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>
 						</span>
@@ -85,7 +100,11 @@
 		</div>
 	</div>
 
-
+	@section Scripts{
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js" integrity="sha512-rstIgDs0xPgmG6RX1Aba4KV5cWJbAMcvRCVmglpam9SoHZiUCyQVDdH2LPlxoHtrv17XWblE/V/PP+Tr04hbtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/4.0.0/jquery.validate.unobtrusive.min.js" integrity="sha512-xq+Vm8jC94ynOikewaQXMEkJIOBp7iArs3IhFWSWdRT3Pq8wFz46p+ZDFAR7kHnSFf+zUv52B3prRYnbDRdgog==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	
+	}
 
 
 	<!--===============================================================================================-->
