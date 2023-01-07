@@ -3,6 +3,7 @@ using Creative_blog.Models;
 using Creative_blog.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Microsoft.VisualStudio.Web.CodeGeneration.Contracts.Messaging;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -31,6 +32,7 @@ namespace Creative_blog.Controllers
             List<Testimonial> testimonials = _context.Testimonials.ToList();
             List<WeSee> weSees = _context.WeSees.ToList();
             List<WhatWeDo> whatWeDos = _context.WhatWeDos.ToList();
+            
 
             HomeVM home = new HomeVM
             {
@@ -43,11 +45,13 @@ namespace Creative_blog.Controllers
                 Stats = stats,
                 Testimonials = testimonials,
                 WeSees = weSees,
-                WhatWeDos = whatWeDos
+                WhatWeDos = whatWeDos,
             };
 
             return View(home);
         }
+
+        
 
         public IActionResult Privacy()
         {

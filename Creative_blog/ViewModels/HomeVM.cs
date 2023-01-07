@@ -16,6 +16,7 @@ namespace Creative_blog.ViewModels
         public List<Testimonial> Testimonials { get; set; }
         public List<WeSee> WeSees { get; set; }
         public List<WhatWeDo> WhatWeDos { get; set; }
+        public List<TouchMessage> TouchMessages { get; set; }
 
 
 

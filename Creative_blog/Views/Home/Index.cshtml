@@ -359,20 +359,21 @@
                     </div>
                 }
                 <div class="form">
-                    <h6 class="section-subtitle">Available 24/7</h6>
+                    @*<h6 class="section-subtitle">Available 24/7</h6>
                     <h6 class="section-title mb-4">Get In Touch</h6>
-                    <form>
+                    <form asp-controller="Home" asp-action="SendMessage" method="post" enctype="multipart/form-data">
                         <div class="form-group">
-                            <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+                            <input asp-for="TouchMessages." type="email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
                         </div>
                         <div class="form-group">
                             <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password" required>
                         </div>
                         <div class="form-group">
                             <textarea name="contact-message" id="" cols="30" rows="7" class="form-control form-control-lg" placeholder="Message"></textarea>
-                        </div>
+                        </div>*@
+                         <img width="600" src="assets/imgs/message.jpeg"  > 
                         <button type="submit" class="btn btn-primary btn-block btn-lg mt-3">Send Message</button>
-                    </form>
+                    @*</form>*@
                 </div>
             </div>
         </div>
@@ -392,9 +393,9 @@
                                 <img src="assets/imgs/logo.png" >
                                 <h6>Creative Studio</h6>
                             </a>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae nobis fugit maxime deleniti minus optio accusamus, quam maiores explicabo sunt.</p>
+                            <p>Creator Studio lets creators and publishers manage posts, insights and messages from all of your pages in one place.</p>
                             <p class="mt-3">
-                                Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a class="d-inline text-primary" href="http://www.devcrud.com">DevCRUD</a>
+                                Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a class="d-inline text-primary" ></a>
                             </p>
                         </li>
                     </ul>
@@ -413,7 +414,6 @@
                                 <div class="col">
                                     <a href="#team">Team</a>
                                     <a href="#blog">Blog</a>
-                                    <a href="#">Faq</a>
                                     <a href="#">Privacy Policy</a>
                                 </div>
                             </div>
@@ -425,15 +425,15 @@
                         </li>
                         <li class="list-body">
                             <p>Contact us and we'll get back to you within 24 hours.</p>
-                            <p><i class="ti-location-pin"></i> 12345 Fake ST NoWhere AB Country</p>
-                            <p><i class="ti-email"></i>  info@website.com</p>
+                            <p><i class="ti-location-pin"></i> Empire State Building , 4/21</p>
+                            <p><i class="ti-email"></i>  Creative@website.com</p>
                             <div class="social-links">
-                                <a href="javascript:void(0)" class="link"><i class="ti-facebook"></i></a>
-                                <a href="javascript:void(0)" class="link"><i class="ti-twitter-alt"></i></a>
-                                <a href="javascript:void(0)" class="link"><i class="ti-google"></i></a>
-                                <a href="javascript:void(0)" class="link"><i class="ti-pinterest-alt"></i></a>
-                                <a href="javascript:void(0)" class="link"><i class="ti-instagram"></i></a>
-                                <a href="javascript:void(0)" class="link"><i class="ti-rss"></i></a>
+                                <a href="http://www.facebook.com" class="link"><i class="ti-facebook"></i></a>
+                                <a href="http://www.twitter.com" class="link"><i class="ti-twitter-alt"></i></a>
+                                <a href="http://www.google.com" class="link"><i class="ti-google"></i></a>
+                                <a href="http://www.pinterest.com" class="link"><i class="ti-pinterest-alt"></i></a>
+                                <a href="http://www.instagram.com" class="link"><i class="ti-instagram"></i></a>
+                                <a href="http://www.rss.com" class="link"><i class="ti-rss"></i></a>
                             </div>
                         </li>
                     </ul>

@@ -1,0 +1,121 @@
+﻿@model TouchMessage
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Send a Message</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="~/assets/Login_v1/images/icons/favicon.ico">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="~/assets/Login_v1/vendor/bootstrap/css/bootstrap.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="~/assets/Login_v1/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="~/assets/Login_v1/vendor/animate/animate.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="~/assets/Login_v1/vendor/css-hamburgers/hamburgers.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="~/assets/Login_v1/vendor/select2/select2.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="~/assets/Login_v1/css/util.css">
+	<link rel="stylesheet" type="text/css" href="~/assets/Login_v1/css/main.css">
+	<!--===============================================================================================-->
+</head>
+<body>
+
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-pic js-tilt" data-tilt>
+					<img src="~/assets/Login_v1/images/img-01.png" alt="IMG">
+				</div>
+
+				<div class="text-danger" asp-validation-summary="All"></div>
+
+				<form asp-controller="SendMessage" asp-action="SendMessage" method="post" enctype="multipart/form-data" class="login100-form validate-form">
+					<span class="login100-form-title">
+						Send Us a Message For Any Info!
+					</span>
+
+					<div class="wrap-input100 validate-input" data-validate="Fullname is required">
+						<input asp-for="Fullname" class="input100" type="text" name="Fullname" placeholder="Fullname">
+						<span class="text-danger" asp-validation-for="Fullname"></span>
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+
+
+					<div class="wrap-input100 validate-input" data-validate="Email is required: ex@abc.xyz">
+						<input asp-for="Email" class="input100" type="text" name="email" placeholder="Email">
+						<span class="text-danger" asp-validation-for="Email"></span>
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Message is required">
+						<input asp-for="Message" class="input100" type="text" name="Message" placeholder="Your Message">
+						<span asp-validation-for="Message" class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					
+
+					<div class="container-login100-form-btn">
+						<button onclick="myFunction()" class="login100-form-btn">
+							Send
+						</button>
+					</div>
+
+					<div class="text-center p-t-136">
+						<a class="txt2">
+							.
+							@*<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>*@
+						</a>
+					</div>
+
+					
+				</form>
+			</div>
+		</div>
+	</div>
+
+	@section Scripts{
+		<script>
+			function myFunction() {
+				alert("Your message has been sent successfully!");
+			}
+		</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js" integrity="sha512-rstIgDs0xPgmG6RX1Aba4KV5cWJbAMcvRCVmglpam9SoHZiUCyQVDdH2LPlxoHtrv17XWblE/V/PP+Tr04hbtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/4.0.0/jquery.validate.unobtrusive.min.js" integrity="sha512-xq+Vm8jC94ynOikewaQXMEkJIOBp7iArs3IhFWSWdRT3Pq8wFz46p+ZDFAR7kHnSFf+zUv52B3prRYnbDRdgog==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	
+	}
+
+
+	<!--===============================================================================================-->
+	<script src="~/assets/Login_v1/vendor/jquery/jquery-3.2.1.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="~/assets/Login_v1/vendor/bootstrap/js/popper.js"></script>
+	<script src="~/assets/Login_v1/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="~/assets/Login_v1/vendor/select2/select2.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="~/assets/Login_v1/vendor/tilt/tilt.jquery.min.js"></script>
+	<script>
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+	<!--===============================================================================================-->
+	<script src="~/assets/Login_v1/js/main.js"></script>
+
+</body>
+
+</html>

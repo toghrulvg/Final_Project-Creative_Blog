@@ -50,6 +50,8 @@ namespace Creative_blog
 
                 opt.User.RequireUniqueEmail = true;
 
+                opt.SignIn.RequireConfirmedEmail = true;
+
 
                 opt.Lockout.MaxFailedAccessAttempts = 3;
                 opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);

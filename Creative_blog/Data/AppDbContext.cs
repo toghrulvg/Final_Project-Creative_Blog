@@ -22,6 +22,7 @@ namespace Creative_blog.Data
         public DbSet<Testimonial> Testimonials { get; set; }
         public DbSet<WeSee> WeSees { get; set; }
         public DbSet<WhatWeDo> WhatWeDos { get; set; }
+        public DbSet<TouchMessage> TouchMessages { get; set; }
 
 
 
@@ -38,6 +39,7 @@ namespace Creative_blog.Data
             modelBuilder.Entity<Testimonial>().HasQueryFilter(m => !m.IsDeleted);
             modelBuilder.Entity<WeSee>().HasQueryFilter(m => !m.IsDeleted);
             modelBuilder.Entity<WhatWeDo>().HasQueryFilter(m => !m.IsDeleted);
+            modelBuilder.Entity<TouchMessage>().HasQueryFilter(m => !m.IsDeleted);
         }
     }
 }
