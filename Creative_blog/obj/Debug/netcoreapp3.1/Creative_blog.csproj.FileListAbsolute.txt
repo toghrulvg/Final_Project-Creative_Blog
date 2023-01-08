@@ -194,3 +194,5 @@ C:\Users\hp\source\repos\Creative_blog\Creative_blog\bin\Debug\netcoreapp3.1\run
 C:\Users\hp\source\repos\Creative_blog\Creative_blog\obj\Debug\netcoreapp3.1\Razor\Views\SendMessage\Index.cshtml.g.cs
 C:\Users\hp\source\repos\Creative_blog\Creative_blog\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\ReceivedMessages\Index.cshtml.g.cs
 C:\Users\hp\source\repos\Creative_blog\Creative_blog\obj\Debug\netcoreapp3.1\Razor\Views\Error.cshtml.g.cs
+C:\Users\hp\source\repos\Creative_blog\Creative_blog\obj\Debug\netcoreapp3.1\Razor\Views\Account\Index.cshtml.g.cs
+C:\Users\hp\source\repos\Creative_blog\Creative_blog\obj\Debug\netcoreapp3.1\Razor\Views\Account\VerifyEmail.cshtml.g.cs
