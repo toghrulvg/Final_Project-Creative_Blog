@@ -1,5 +1,7 @@
 ﻿using Creative_blog.Data;
+using Creative_blog.Helpers.Enums;
 using Creative_blog.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
@@ -8,6 +10,7 @@ using System.Threading.Tasks;
 namespace Creative_blog.Areas.AdminArea.Controllers
 {
     [Area("AdminArea")]
+    [Authorize(Roles = "Admin")]
     public class OurServiceController : Controller
     {
         private readonly AppDbContext _context;

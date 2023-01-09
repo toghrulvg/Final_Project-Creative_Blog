@@ -1,6 +1,8 @@
 ﻿using Creative_blog.Data;
+using Creative_blog.Helpers.Enums;
 using Creative_blog.Models;
 using Creative_blog.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +11,7 @@ using System.Threading.Tasks;
 namespace Creative_blog.Areas.AdminArea.Controllers
 {
     [Area("AdminArea")]
+    [Authorize(Roles = "Admin")]
     public class ReceivedMessagesController : Controller
 	{
         private readonly AppDbContext _context;

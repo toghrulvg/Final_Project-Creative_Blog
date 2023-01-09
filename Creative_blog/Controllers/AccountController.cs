@@ -1,4 +1,5 @@
-﻿using Creative_blog.Models;
+﻿using Creative_blog.Helpers.Enums;
+using Creative_blog.Models;
 using Creative_blog.ViewModels.AccountViewModels;
 using MailKit.Net.Smtp;
 using MailKit.Security;
@@ -6,6 +7,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using MimeKit;
 using MimeKit.Text;
+using System;
 using System.Threading.Tasks;
 
 namespace Creative_blog.Controllers
@@ -14,11 +16,17 @@ namespace Creative_blog.Controllers
     {
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
-        public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager)
+        private readonly RoleManager<IdentityRole> _roleManager;
+        public AccountController(UserManager<AppUser> userManager,
+            SignInManager<AppUser> signInManager,
+            RoleManager<IdentityRole> roleManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _roleManager= roleManager;
+
         }
+        
         [HttpGet]
         public IActionResult Login()
         {
@@ -56,6 +64,8 @@ namespace Creative_blog.Controllers
                 }
                 return View(registerVM);
             }
+
+            await _userManager.AddToRoleAsync(user, Roles.Member.ToString());
 
             string token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
 
@@ -150,7 +160,19 @@ namespace Creative_blog.Controllers
         {
             return View();
         }
+        //public async Task CreateRoles()
+        //{
+        //    foreach (var role in Enum.GetValues(typeof(Roles)))
+        //    {
+        //        if (!await _roleManager.RoleExistsAsync(role.ToString()))
+        //        {
+        //            await _roleManager.CreateAsync(new IdentityRole { Name = role.ToString()});
+        //        }
+        //    }
+        //}
 
     }
+    
+   
 
 }
