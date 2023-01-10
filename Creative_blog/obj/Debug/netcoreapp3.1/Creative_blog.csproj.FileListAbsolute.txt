@@ -196,3 +196,4 @@ C:\Users\hp\source\repos\Creative_blog\Creative_blog\obj\Debug\netcoreapp3.1\Cre
 C:\Users\hp\source\repos\Creative_blog\Creative_blog\obj\Debug\netcoreapp3.1\Creative_blog.dll
 C:\Users\hp\source\repos\Creative_blog\Creative_blog\obj\Debug\netcoreapp3.1\Creative_blog.pdb
 C:\Users\hp\source\repos\Creative_blog\Creative_blog\obj\Debug\netcoreapp3.1\Creative_blog.genruntimeconfig.cache
+C:\Users\hp\source\repos\Creative_blog\Creative_blog\obj\Debug\netcoreapp3.1\Razor\Views\Blog\Index.cshtml.g.cs

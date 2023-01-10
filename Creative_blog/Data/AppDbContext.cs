@@ -23,6 +23,7 @@ namespace Creative_blog.Data
         public DbSet<WeSee> WeSees { get; set; }
         public DbSet<WhatWeDo> WhatWeDos { get; set; }
         public DbSet<TouchMessage> TouchMessages { get; set; }
+        public DbSet<Comment> Comments { get; set; }
 
 
 
@@ -40,6 +41,7 @@ namespace Creative_blog.Data
             modelBuilder.Entity<WeSee>().HasQueryFilter(m => !m.IsDeleted);
             modelBuilder.Entity<WhatWeDo>().HasQueryFilter(m => !m.IsDeleted);
             modelBuilder.Entity<TouchMessage>().HasQueryFilter(m => !m.IsDeleted);
+            modelBuilder.Entity<Comment>().HasQueryFilter(m => !m.IsDeleted);
         }
     }
 }

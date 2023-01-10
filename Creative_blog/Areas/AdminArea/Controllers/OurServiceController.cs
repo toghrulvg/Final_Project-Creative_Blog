@@ -1,9 +1,14 @@
 ﻿using Creative_blog.Data;
+using Creative_blog.Helpers;
 using Creative_blog.Helpers.Enums;
 using Creative_blog.Models;
+using Creative_blog.ViewModels;
+using Creative_Blog.Helpers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -18,10 +23,72 @@ namespace Creative_blog.Areas.AdminArea.Controllers
         {
             _context = context;
         }
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page = 1, int take = 4)
         {
-            return View(await _context.OurServices.Where(m => !m.IsDeleted).ToListAsync());
+            List<OurService> ourServices = await _context.OurServices
+                .Where(m => !m.IsDeleted)
+                .Skip((page * take) - take)
+                .Take(take).ToListAsync();
+
+            List<OurServiceListVM> mapDatas = GetMapDatas(ourServices);
+
+            int count = await GetPageCount(take);
+
+            Paginate<OurServiceListVM> result = new Paginate<OurServiceListVM>(mapDatas,page,count);
+
+
+            return View(result);
+
+           
+
+
         }
+
+
+        public async Task<int> GetPageCount(int take)
+        {
+            int productCount = await _context.OurServices.Where(m => !m.IsDeleted).CountAsync();
+
+            return (int)Math.Ceiling((decimal)productCount / take);
+        }
+
+
+        private List<OurServiceListVM> GetMapDatas(List<OurService> ourServices)
+        {
+            List<OurServiceListVM> ourServiceList = new List<OurServiceListVM>();
+            foreach (var ourService in ourServices)
+            {
+                OurServiceListVM newOurService = new OurServiceListVM
+                {
+                    Id = ourService.Id,
+                    Icon = ourService.Icon,
+                    Desc = ourService.Desc,
+                    Name = ourService.Name
+                };
+                ourServiceList.Add(newOurService);
+            }
+            return ourServiceList;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         [HttpGet]
         public IActionResult Create() => View();
