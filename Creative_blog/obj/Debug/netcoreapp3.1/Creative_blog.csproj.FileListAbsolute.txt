@@ -200,3 +200,5 @@ C:\Users\hp\source\repos\Creative_blog\Creative_blog\obj\Debug\netcoreapp3.1\Cre
 C:\Users\hp\source\repos\Creative_blog\Creative_blog\obj\Debug\netcoreapp3.1\Creative_blog.genruntimeconfig.cache
 C:\Users\hp\source\repos\Creative_blog\Creative_blog\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\BlogCrud\Index.cshtml.g.cs
 C:\Users\hp\source\repos\Creative_blog\Creative_blog\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\BlogCrud\Create.cshtml.g.cs
+C:\Users\hp\source\repos\Creative_blog\Creative_blog\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\BlogCrud\Edit.cshtml.g.cs
+C:\Users\hp\source\repos\Creative_blog\Creative_blog\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\BlogCrud\Detail.cshtml.g.cs

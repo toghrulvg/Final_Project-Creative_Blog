@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -78,9 +79,93 @@ namespace Creative_blog.Areas.AdminArea.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        [HttpGet]
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id is null) return BadRequest();
+
+            Blog blog = await GetByIdAsync((int)id);
+
+            if (blog == null) return NotFound();
+
+            return View(blog);
+
+        }
+        public async Task<IActionResult> Delete(int id)
+        {
+            Blog blog = await GetByIdAsync(id);
+
+            if (blog == null) return NotFound();
+
+
+            blog.IsDeleted = true;
+
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int? id, Blog blog)
+        {
+            if (id is null) return BadRequest();
+
+            if (blog.Photo == null) return RedirectToAction(nameof(Index));
+
+            var dbBlog = await GetByIdAsync((int)id);
+
+            if (dbBlog == null) return NotFound();
+
+            if (!blog.Photo.CheckFileType("image/"))
+            {
+                ModelState.AddModelError("Photo", "Please choose correct image type");
+                return View(dbBlog);
+            }
+
+            if (!blog.Photo.CheckFileSize(1000))
+            {
+                ModelState.AddModelError("Photo", "Please choose correct image size");
+                return View(dbBlog);
+            }
+
+            string oldPath = Helper.GetFilePath(_env.WebRootPath, "assets/blog/assets/images", dbBlog.Image);
+
+            Helper.DeleteFile(oldPath);
+
+            string fileName = Guid.NewGuid().ToString() + "_" + blog.Photo.FileName;
+
+            string newPath = Helper.GetFilePath(_env.WebRootPath, "assets/imgs", fileName);
+
+
+            using (FileStream stream = new FileStream(newPath, FileMode.Create))
+            {
+                await blog.Photo.CopyToAsync(stream);
+            }
+
+            dbBlog.Image = fileName;
+            dbBlog.Name = blog.Name;
+            dbBlog.Desc = blog.Desc;
+            dbBlog.LastModified = DateTime.Now;
+
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+        }
 
 
 
+        [HttpGet]
+        public async Task<IActionResult> Detail(int? id)
+        {
+            if (id is null) return BadRequest();
+
+            Blog blog = await GetByIdAsync((int)id);
+
+            if (blog == null) return NotFound();
+
+            return View(blog);
+
+        }
 
 
 

@@ -38,9 +38,9 @@
 
             <nav class="navbar">
 
-                <a href="#">
-                    <img src="~/assets/imgs/logo.png" width="150" height="40" class="logo-light">
-                    <img src="~/assets/imgs/logo.png" width="150" height="40" class="logo-dark">
+                <a asp-controller="Home" asp-action="Index">
+                    <img src="~/assets/imgs/logo.png" width="50" height="50" class="logo-light">
+                    <img src="~/assets/imgs/logo.png" width="50" height="50" class="logo-dark">
                 </a>
 
                 <div class="btn-group">
@@ -189,7 +189,7 @@
                                             <a href="#" class="h4">Created by Admin</a>
 
                                             <p class="text-sm">
-                                                <time datetime="2022-01-17">Jan 11, 2022</time>
+                                                <time datetime="2022-01-17">@item.LastModified.ToString("MM/dd/yyyy")</time>
 
                                             </p>
                                         </div>
@@ -209,7 +209,6 @@
 
                     </div>
 
-                    <button class="btn load-more">Load More</button>
 
                 </div>
 
@@ -225,7 +224,7 @@
 
                     <ul class="topics">
 
-                        <h2 class="h2">Topics</h2>
+                        <li class="h2">Topics</li>
 
                         <li href="#" data-filter="Database" class="topic-btn">
                             <div class="icon-box">
@@ -285,19 +284,19 @@
                             <ul class="social-link">
 
                                 <li>
-                                    <a href="#" class="icon-box discord">
+                                    <a href="https://discord.com/" class="icon-box discord">
                                         <ion-icon name="logo-discord"></ion-icon>
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href="#" class="icon-box twitter">
+                                    <a href="https://twitter.com/" class="icon-box twitter">
                                         <ion-icon name="logo-twitter"></ion-icon>
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href="#" class="icon-box facebook">
+                                    <a href="https://facebook.com/" class="icon-box facebook">
                                         <ion-icon name="logo-facebook"></ion-icon>
                                     </a>
                                 </li>
@@ -326,74 +325,7 @@
       - #FOOTER
     -->
 
-    <footer>
-
-        <div class="container">
-
-            <div class="wrapper">
-
-                <a href="#" class="footer-logo">
-                    <img src="~/assets/blog/assets/images/logo-light.svg" alt="DevBlog's Logo" width="150" height="40" class="logo-light">
-                    <img src="~/assets/blog/assets/images/logo-dark.svg" alt="DevBlog's Logo" width="150" height="40" class="logo-dark">
-                </a>
-
-                <p class="footer-text">
-                    Learn about Web accessibility, Web performance, and Database management.
-                </p>
-
-            </div>
-
-            <div class="wrapper">
-
-                <p class="footer-title">Quick Links</p>
-
-                <ul>
-
-                    <li>
-                        <a href="#" class="footer-link">Advertise with us</a>
-                    </li>
-
-                    <li>
-                        <a href="#" class="footer-link">About Us</a>
-                    </li>
-
-                    <li>
-                        <a href="#" class="footer-link">Contact Us</a>
-                    </li>
-
-                </ul>
-
-            </div>
-
-            <div class="wrapper">
-
-                <p class="footer-title">Legal Stuff</p>
-
-                <ul>
-
-                    <li>
-                        <a href="#" class="footer-link">Privacy Notice</a>
-                    </li>
-
-                    <li>
-                        <a href="#" class="footer-link">Cookie Policy</a>
-                    </li>
-
-                    <li>
-                        <a href="#" class="footer-link">Terms Of Use</a>
-                    </li>
-
-                </ul>
-
-            </div>
-
-        </div>
-
-        <p class="copyright">
-            &copy; Copyright 2022 <a href="#">codewithsadee</a>
-        </p>
-
-    </footer>
+    
 
 
 

@@ -8,7 +8,7 @@ namespace Creative_blog.Models
 {
     public class Blog : BaseEntity
     {
-        [Required]
+        
         public string Image { get; set; }
         [Required]
         public string Name { get; set; }
