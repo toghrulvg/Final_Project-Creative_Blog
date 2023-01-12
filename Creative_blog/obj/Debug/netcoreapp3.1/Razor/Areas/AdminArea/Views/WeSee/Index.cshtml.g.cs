@@ -21,20 +21,27 @@ using Creative_blog;
 #nullable disable
 #nullable restore
 #line 2 "C:\Users\hp\source\repos\Creative_blog\Creative_blog\Areas\AdminArea\Views\_ViewImports.cshtml"
-using Creative_blog.Models;
+using Creative_blog.Helpers;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 3 "C:\Users\hp\source\repos\Creative_blog\Creative_blog\Areas\AdminArea\Views\_ViewImports.cshtml"
+using Creative_blog.Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\hp\source\repos\Creative_blog\Creative_blog\Areas\AdminArea\Views\_ViewImports.cshtml"
 using Creative_blog.ViewModels;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c6380f85d6fc9f1efad1fe927460efe545667a07", @"/Areas/AdminArea/Views/WeSee/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"76bc25686ac215c1878158400407b4af07f402b1", @"/Areas/AdminArea/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0645bf9fafaac9ce4c063afac97e16fef20a367e", @"/Areas/AdminArea/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Areas_AdminArea_Views_WeSee_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     #nullable disable
@@ -84,7 +91,7 @@ using Creative_blog.ViewModels;
 #line hidden
 #nullable disable
             WriteLiteral("\r\n<div class=\"container\">\r\n    <div class=\"container-fluid my-3 mx-3\">\r\n        <div class=\"table-responsive pt-3\">\r\n            <div class=\"create-btn mb-3\">\r\n                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c6380f85d6fc9f1efad1fe927460efe545667a077310", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c6380f85d6fc9f1efad1fe927460efe545667a077515", async() => {
                 WriteLiteral("<i class=\"fa-solid fa-plus\"><h1></h1></i>");
             }
             );
@@ -150,7 +157,7 @@ WriteAttributeValue("", 1112, item.Icon, 1112, 10, false);
 #line hidden
 #nullable disable
             WriteLiteral("\r\n                            </td>\r\n\r\n\r\n\r\n                            \r\n\r\n                            <td style=\"text-align: center;\">\r\n                                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c6380f85d6fc9f1efad1fe927460efe545667a0711015", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c6380f85d6fc9f1efad1fe927460efe545667a0711220", async() => {
                 WriteLiteral("<i class=\"mdi mdi-information mx-0\">D</i>");
             }
             );
@@ -182,7 +189,7 @@ WriteAttributeValue("", 1112, item.Icon, 1112, 10, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c6380f85d6fc9f1efad1fe927460efe545667a0713349", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c6380f85d6fc9f1efad1fe927460efe545667a0713554", async() => {
                 WriteLiteral("<i class=\"mdi mdi-table-edit\"></i>E");
             }
             );
@@ -214,7 +221,7 @@ WriteAttributeValue("", 1112, item.Icon, 1112, 10, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c6380f85d6fc9f1efad1fe927460efe545667a0715675", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c6380f85d6fc9f1efad1fe927460efe545667a0715880", async() => {
                 WriteLiteral("\r\n                                    <button type=\"submit\" class=\"btn btn-danger\"><i class=\"mdi mdi-delete-forever\"></i>R</button>\r\n                                ");
             }
             );

@@ -7,7 +7,7 @@
     <meta name="description" content="Start your development with Creative Studio landing page.">
     <meta name="author" content="Devcrud">
     <title>Creative Studio</title>
-    <link rel="shortcut icon" type="image/png" href="~/assets/imgs/logo.png">
+    <link rel="shortcut icon" href="~/assets/imgs/logo.ico" type="image/x-icon">
 
 
 
@@ -47,11 +47,16 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#testimonial">Testimonial</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#blog">Blog</a>
-                    </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    @if (User.Identity.Name == "Admin")
+                    {
+                        <a class="nav-link bg-success rounded"  asp-controller="Dashboard" asp-area="adminarea" asp-action="Index" >AdminPanel</a>
+                    }
+                    <li class="nav-item">
+                        <a class="nav-link bg-warning rounded" asp-controller="Blog" asp-action="Index">Blog</a>
                     </li>
                     @if (User.Identity.IsAuthenticated){
                         <li class="nav-item bg-danger rounded">
@@ -140,7 +145,7 @@
             <h6 class="section-subtitle text-center">Makes Happen</h6>
             <h5 class="section-title text-center mb-6">Our Service</h5>
             <div class="row">
-                @foreach (var ourService in Model.OurServices)
+                @foreach (var ourService in Model.OurServices.Take(8))
                 {
                     <div class="col-sm-4 col-md-3">
                     <div class="card mb-4">
@@ -197,7 +202,7 @@
     <section id="team">
         <div class="container">
             <h6 class="section-subtitle text-center">Meet With</h6>
-            <h6 class="section-title mb-5 text-center">Our Angels</h6>
+            <h6 class="section-title mb-5 text-center">Our Family</h6>
             <div class="row">
                 @foreach (var cast in Model.Casts.Take(3))
                 {
@@ -285,12 +290,16 @@
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
             <div class="modal-content">
-                <iframe width="800" height="475" src="https://www.youtube.com" frameborder="0" allowfullscreen></iframe>
+                <iframe width="800" height="475"
+                        src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                </iframe>
+
+
             </div>
         </div>
     </div>
     <!-- end of modal -->
-    <!-- Blog Section -->
+    @*<!-- Blog Section -->
     <section id="blog">
         <div class="container">
             <h6 class="section-subtitle text-center">News Feeds</h6>
@@ -317,7 +326,7 @@
             </div>
         </div>
     </section>
-    <!-- End of Blog Section -->
+    <!-- End of Blog Section -->*@
     <!-- Contact Section -->
     <section id="contact">
         <div class="container">

@@ -40,15 +40,8 @@ using Creative_blog.ViewModels.AccountViewModels;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 5 "C:\Users\hp\source\repos\Creative_blog\Creative_blog\Views\_ViewImports.cshtml"
-using Creative_blog.Helpers;
-
-#line default
-#line hidden
-#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2171b739f1ed29ff90bfcb2597dc80fc0d70a207", @"/Views/Error.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"cd19ea7581725586d6ae00372a6771328560beeb", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"aad9464dabcde6bda160bd52063c38e21cdb360e", @"/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Views_Error : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<ErrorViewModel>
     #nullable disable

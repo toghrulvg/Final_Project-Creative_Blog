@@ -21,20 +21,27 @@ using Creative_blog;
 #nullable disable
 #nullable restore
 #line 2 "C:\Users\hp\source\repos\Creative_blog\Creative_blog\Areas\AdminArea\Views\_ViewImports.cshtml"
-using Creative_blog.Models;
+using Creative_blog.Helpers;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 3 "C:\Users\hp\source\repos\Creative_blog\Creative_blog\Areas\AdminArea\Views\_ViewImports.cshtml"
+using Creative_blog.Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\hp\source\repos\Creative_blog\Creative_blog\Areas\AdminArea\Views\_ViewImports.cshtml"
 using Creative_blog.ViewModels;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7abbb7ca18d54f0620daac73327e90109fe8bc80", @"/Areas/AdminArea/Views/ReceivedMessages/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"76bc25686ac215c1878158400407b4af07f402b1", @"/Areas/AdminArea/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0645bf9fafaac9ce4c063afac97e16fef20a367e", @"/Areas/AdminArea/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Areas_AdminArea_Views_ReceivedMessages_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<HomeVM>
     #nullable disable
@@ -145,7 +152,7 @@ using Creative_blog.ViewModels;
 #line hidden
 #nullable disable
             WriteLiteral("\r\n                            </td>\r\n\r\n\r\n\r\n                            \r\n\r\n                            <td style=\"text-align: center;\">\r\n                                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7abbb7ca18d54f0620daac73327e90109fe8bc807654", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7abbb7ca18d54f0620daac73327e90109fe8bc807859", async() => {
                 WriteLiteral("\r\n                                    <button type=\"submit\" class=\"btn btn-danger\"><i class=\"mdi mdi-delete-forever\"></i>R</button>\r\n                                ");
             }
             );

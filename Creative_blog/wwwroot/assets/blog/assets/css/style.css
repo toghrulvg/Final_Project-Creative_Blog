@@ -1,24 +1,8 @@
-/*-----------------------------------*\ 
-  #style.css
-\*-----------------------------------*/
 
-/**
- * copyright 2022 @codewithsadee 
- */
-
-
-
-
-
-/*-----------------------------------*\ 
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
 
 .light-theme {
 
-  /**
-   * light theme colors 
-   */
+  
 
   --background-primary: hsl(0, 0%, 100%);
   --background-secondary: hsl(0, 0%, 97%);
@@ -306,7 +290,6 @@ header .btn-group {
   background: var(--background-primary);
   padding: 70px 20px;
   overflow: auto;
-  overscroll-behavior: contain;
   transform: translateX(100%);
   visibility: hidden;
   transition: 0.5s cubic-bezier(1, 0, 0.30, 0.70);

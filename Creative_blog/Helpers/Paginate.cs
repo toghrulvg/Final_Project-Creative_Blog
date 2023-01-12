@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Creative_Blog.Helpers
+namespace Creative_blog.Helpers
 {
     public class Paginate<T>
     {
